@@ -14,7 +14,7 @@ export class Movie extends React.Component {
         credits: {
           cast: [],
           crew: [],
-          //review: []
+          review: []
         }
       }
     }
@@ -85,7 +85,7 @@ export class Movie extends React.Component {
         </div>{/* moviePage */}
 
         <Cast cast={this.state.movie.credits.cast} />
-        //<Review review={this.state.movie.credits.review} />
+        <Review review={this.state.movie.credits.cast} />
       </div>
     );
   }
