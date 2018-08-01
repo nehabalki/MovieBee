@@ -1,0 +1,41 @@
+.figureContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.add-item {
+  border-radius: 2px;
+  border-top: 3px solid #103D5D;
+  margin-right: 50px;
+  background-color: rgb(237, 237, 237);
+  padding: 60px 18px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+  margin-bottom: 34px;
+  width: 25%;
+  margin-right: auto;
+}
+
+.figureContainer figure {
+  width: 48%;
+  margin: 0 0 20px;
+}
+
+@media(min-width: 768px) {
+  .figureContainer {
+    justify-content: flex-start;
+  }
+  .figureContainer figure {
+    width: 31.5%;
+    margin: 0 10.2px 20px 0;
+  }
+}
+
+@media(min-width: 992px) {
+  .figureContainer figure {
+    width: 15.5%;
+  }
+}
