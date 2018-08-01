@@ -1,4 +1,4 @@
-# moviee-react-master
+# MovieBee
 
 
 cd moviee-react-master                
