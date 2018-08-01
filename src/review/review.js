@@ -82,12 +82,12 @@ export class Review extends React.Component {
               <ul>
               {this.state.items.map((item) => {
               return (
-              <li class="new_style" key={item.id}>
-                 <h3>{item.title}</h3>
-                 <p>reviewed by: {item.user}
+              <li key={item.id}>
+                 <h3>
+                 <span>{item.title} </span>
+                 <span id="span2">Reviewed By: {item.user}&nbsp;&nbsp;
                   {item.user === this.state.user.displayName || item.user === this.state.user.email ?
-                   <button onClick={() => this.removeItem(item.id)}>Remove Item</button> : null}
-                 </p>
+                   <button onClick={() => this.removeItem(item.id)}>Remove Review</button> : null}</span></h3>
               </li>
               )
               })}

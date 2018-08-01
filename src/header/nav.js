@@ -52,12 +52,12 @@ export class Nav extends React.Component {
           { this.state.user ?
           <div>
            <div className='user-profile'>
-           <li><img src={this.state.user.photoURL} /></li>
+           <img src={this.state.user.photoURL} />
           </div>
           </div>
           :
           <div className='wrapper'>
-            <li><small>You must logged in to add reviews.</small></li>
+            <small>You must logged in to add reviews.</small>
           </div>
           }
         </ul>
