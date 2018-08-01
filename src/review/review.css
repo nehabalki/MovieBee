@@ -14,7 +14,7 @@ body {
 
 .add-item {
   border-radius: 2px;
-  border-top: 3px solid #103D5D;
+  border-top: 3px solid #42e8f4;;
   margin-right: 50px;
   background-color: rgb(237, 237, 237);
   padding: 60px 18px;
@@ -44,7 +44,7 @@ body {
 }
 
 li h3 {
-  background-color: #103D5D;
+  background-color: #42e8f4;;
   margin: 0;
   color: #fff;
   font-weight: 300;
