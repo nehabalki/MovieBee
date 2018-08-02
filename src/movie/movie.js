@@ -3,6 +3,7 @@ import {Header} from '../header/header';
 import {Form} from '../form/form';
 import {Cast} from '../cast/cast';
 import {Review} from '../review/review';
+import {Trailer} from './trailer_components/trailer';
 import './movie.css';
 import StarRatingComponent from 'react-star-rating-component';
 
@@ -94,6 +95,7 @@ export class Movie extends React.Component {
 
         <Cast cast={this.state.movie.credits.cast} />
 
+				<Trailer className = "movie-trailer" trailer = {this.state.movie.title}/>
         <h3>Rate {this.state.movie.title}</h3>
         <StarRatingComponent
             name="rate1"
