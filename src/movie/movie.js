@@ -82,7 +82,7 @@ export class Movie extends React.Component {
               <StarRatingComponent
               name="rate1"
               starCount={10}
-              value={this.state.movie.vote_average}/></li>
+              value= {this.state.movie.vote_average}/></li>
               <li><span className="bold">Vote count:</span> {this.state.movie.vote_count}</li>
               <li><span className="bold">Genres: </span> {this.state.movie.genres.map((element, index) => {
                   if (index < this.state.movie.genres.length - 1) {
@@ -93,20 +93,11 @@ export class Movie extends React.Component {
                 })}
               </li>
             </ul>
-
             <p>{this.state.movie.overview}</p>
           </section>
         </div>{/* moviePage */}
-
         <Cast cast={this.state.movie.credits.cast} />
-
-				<Trailer className = "movie-trailer" trailer = {this.state.movie.title}/>
-        <h3>Rate {this.state.movie.title}</h3>
-        <StarRatingComponent
-            name="rate1"
-            starCount={10}
-            value={rating}
-            onStarClick={this.onStarClick.bind(this)}/>
+        <Trailer className = "movie-trailer" trailer = {this.state.movie.title}/>
         <Review review={this.state.movie.credits.cast} />
       </div>
 
