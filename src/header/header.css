@@ -8,6 +8,10 @@ header {
 }
 
 button {
+  position: absolute;
+  transition: .5s ease;
+  left: 70%;
+  top: 1%;
   border-radius: 2px;
   min-width: 88px;
   background-color: #ffffff;
@@ -22,7 +26,11 @@ button {
 }
 
 .navbar li {
+  position: absolute;
   margin-bottom: 10px;
+  transition: .5s ease;
+  left: 61%;
+  top: 7%;
 }
 
 .user-profile {

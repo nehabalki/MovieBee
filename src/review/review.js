@@ -76,9 +76,10 @@ export class Review extends React.Component {
 
     return(
       <div>
-        <h3>Review</h3>
+       
         <div className="figureContainer">
           <section className='add-item'>
+           <h3 class="review">Give a review</h3>
               <form onSubmit={this.handleSubmit}>
                 <input type="text" name="username" placeholder="Username" onChange={this.handleChange} value={this.state.username} />
                 <input type="text" name="currentItem" placeholder="Movie review" onChange={this.handleChange} value={this.state.currentItem} />
@@ -91,12 +92,13 @@ export class Review extends React.Component {
                 value={rating}
                 onStarClick={this.onStarClick.bind(this)}/></span>
                 </div>
-
-                <button>Add Review</button>
+                <button id="button1">Add Review</button>
               </form>
           </section>
 
+
           <section className='display-item'>
+          <h1 className="users">User reviews</h1>
             <div className="wrapper">
               <ul>
               {this.state.items.map((item) => {

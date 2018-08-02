@@ -16,7 +16,8 @@ form {
 }
 
 .searchBar:focus {
-  border: 1px solid #1DE9B6;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 
 ::placeholder {
@@ -25,11 +26,12 @@ form {
 }
 
 .searchBar:focus::placeholder {
-  color: #1DE9B6;
+  color: #fff;
 }
 
 .searchIcon {
   position: absolute;
+  left: 90%;
   z-index: 9999;
   margin: 18px 0 0 10px;
 }

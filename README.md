@@ -14,3 +14,4 @@ sudo npm install react-dom -g
 sudo npm install react-router-dom -g                                                                          
 sudo npm install react-scripts -g                                                                     
 sudo npm install firebase -g
+# MovieBee

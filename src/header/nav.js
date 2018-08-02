@@ -57,7 +57,7 @@ export class Nav extends React.Component {
           </div>
           :
           <div className='wrapper'>
-            <small>You must logged in to add reviews.</small>
+            <li>You must logged in to add reviews.</li>
           </div>
           }
         </ul>
