@@ -4,11 +4,13 @@ import {Form} from '../form/form';
 import {Cast} from '../cast/cast';
 import {Review} from '../review/review';
 import './movie.css';
+import StarRatingComponent from 'react-star-rating-component';
 
 export class Movie extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      rating: 3,
       movie: {
         genres: [],
         credits: {
@@ -19,6 +21,11 @@ export class Movie extends React.Component {
       }
     }
     this.getData = this.getData.bind(this);
+
+  }
+
+  onStarClick(nextValue, prevValue, name) {
+    this.setState({rating: nextValue});
   }
 
   getData() {
@@ -54,6 +61,7 @@ export class Movie extends React.Component {
   }
 
   render() {
+    const { rating } = this.state;
     return(
       <div className="container">
         <Header />
@@ -85,8 +93,17 @@ export class Movie extends React.Component {
         </div>{/* moviePage */}
 
         <Cast cast={this.state.movie.credits.cast} />
+
+        <h3>Rate {this.state.movie.title}</h3>
+        <StarRatingComponent
+            name="rate1"
+            starCount={10}
+            value={rating}
+            onStarClick={this.onStarClick.bind(this)}/>
+
         <Review review={this.state.movie.credits.cast} />
       </div>
+
     );
   }
 }
