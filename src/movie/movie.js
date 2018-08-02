@@ -11,7 +11,7 @@ export class Movie extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: 3,
+      rating: 0,
       movie: {
         genres: [],
         credits: {
@@ -21,6 +21,7 @@ export class Movie extends React.Component {
         }
       }
     }
+
     this.getData = this.getData.bind(this);
 
   }
@@ -77,7 +78,11 @@ export class Movie extends React.Component {
             <h2 className="sectionTitle">{this.state.movie.title}</h2>
             <ul className="detailsList">
               <li><span className="bold">Release date:</span> {this.state.movie.release_date}</li>
-              <li><span className="bold">Rating:</span> {this.state.movie.vote_average}</li>
+              <li><span className="bold">Rating:</span> {this.state.movie.vote_average} out of 10&nbsp;&nbsp;&nbsp;
+              <StarRatingComponent
+              name="rate1"
+              starCount={10}
+              value={this.state.movie.vote_average}/></li>
               <li><span className="bold">Vote count:</span> {this.state.movie.vote_count}</li>
               <li><span className="bold">Genres: </span> {this.state.movie.genres.map((element, index) => {
                   if (index < this.state.movie.genres.length - 1) {
@@ -102,7 +107,6 @@ export class Movie extends React.Component {
             starCount={10}
             value={rating}
             onStarClick={this.onStarClick.bind(this)}/>
-
         <Review review={this.state.movie.credits.cast} />
       </div>
 
